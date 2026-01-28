@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 };
 
 import Navbar from "@/components/Navbar";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
 
 // ... (previous imports)
 
@@ -29,10 +32,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} antialiased cursor-none`}
       >
-        <Navbar />
-        {children}
+        <Preloader />
+        <CustomCursor />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

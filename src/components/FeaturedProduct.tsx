@@ -13,10 +13,10 @@ export default function FeaturedProduct() {
           
           {/* Image Side */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: -50, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-1/2"
           >
              <div className="relative aspect-square md:aspect-[4/3] w-full overflow-hidden shadow-2xl">
@@ -33,8 +33,8 @@ export default function FeaturedProduct() {
           <motion.div 
              initial={{ opacity: 0, x: 50 }}
              whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.8, delay: 0.2 }}
+             viewport={{ once: true, margin: "-100px" }}
+             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
              className="w-full lg:w-1/2 text-center lg:text-left"
           >
             <div className="inline-block border border-brown-900/20 px-4 py-1 mb-6">

@@ -49,9 +49,9 @@ export default function Hero() {
         </motion.span>
         
         <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream-50 leading-[1.1] mb-8 max-w-4xl"
         >
           Freshly Baked. <br />
@@ -61,7 +61,7 @@ export default function Hero() {
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.6 }}
+           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <Link 
             href="#shop" 
